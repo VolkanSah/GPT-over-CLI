@@ -40,7 +40,7 @@ If the user has provided a prompt, the main() function calls the get_response() 
 
 To run this code, you can save it as a Python file and then run it from the command line. For example, if you save the code as chatgpt.py, you can run it by typing the following command into the terminal:
 
-Code snippet
+```
 python3 chatgpt.py "What is the meaning of life?"
-Use code with caution. Learn more
-This command will get a response from the OpenAI API and print it to the console.
+```
+Use code with caution!
