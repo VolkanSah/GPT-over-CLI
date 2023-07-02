@@ -11,7 +11,7 @@ def call_api(prompt):
     }
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer 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"
+        "Authorization": f"Bearer sk-........................................."
     }
     command = [
         "curl",
