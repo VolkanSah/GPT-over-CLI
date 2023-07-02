@@ -29,7 +29,7 @@ Please note, this tool is not intended to replace OpenAI's chat models for inter
 Feel free to contribute to this project by opening issues or submitting pull requests. All contributions are welcome.
 
 ## Credits
-[VolkanLücükbudak](https://github.com/volkansah)
+[Volkan Kücükbudak](https://github.com/volkansah)
 
 
 
