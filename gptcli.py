@@ -7,7 +7,7 @@ def get_response(prompt):
     url = "https://api.openai.com/v1/engines/text-davinci-003/completions"
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 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"
+        "Authorization": "Bearer sk-..........................................."
     }
     data = {
         "prompt": prompt,
