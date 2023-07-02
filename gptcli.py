@@ -11,7 +11,7 @@ def call_api(prompt):
     }
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer YOUR_OPENAI_API_KEY"
+        "Authorization": f"Bearer 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"
     }
     command = [
         "curl",
