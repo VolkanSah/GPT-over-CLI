@@ -1,27 +1,27 @@
-# GPT API over CLI
-import subprocess
+
+import requests
 import sys
-import json
-def call_api(prompt):
-    """Calls the OpenAI API using cURL."""
-    data = {
-        "model": "gpt-3.5-turbo-16k",
-        "messages": [{"role": "system", "content": "You are a helpful assistant."}, 
-                     {"role": "user", "content": prompt}]
-    }
+
+def get_response(prompt):
+    """Gets a response from the OpenAI API."""
+    url = "https://api.openai.com/v1/engines/text-davinci-003/completions"
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer sk-........................................."
+        "Authorization": "Bearer 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"
     }
-    command = [
-        "curl",
-        "https://api.openai.com/v1/chat/completions",
-        "-X", "POST",
-        "-H", json.dumps(headers),
-        "-d", json.dumps(data)
-    ]
-    result = subprocess.run(command, capture_output=True, text=True)
-    return result.stdout
+    data = {
+        "prompt": prompt,
+        "temperature": 0.7,
+        "max_tokens": 100,
+    }
+    try:
+        response = requests.post(url, headers=headers, json=data)
+        response.raise_for_status()  # This will raise an exception if the response contains an HTTP error status code
+    except requests.exceptions.RequestException as e:
+        print(f"An error occurred while contacting the API: {e}")
+        sys.exit(1)
+
+    return response.json()["choices"][0]["text"]
 
 def main():
     """The main function."""
@@ -30,9 +30,8 @@ def main():
         sys.exit(1)
 
     prompt = sys.argv[1]
-    response = call_api(prompt)
+    response = get_response(prompt)
     print(response)
 
 if __name__ == "__main__":
     main()
-# VolkanSah
