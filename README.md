@@ -1,4 +1,5 @@
 # GPT-over-CLI
+##### Update 2025/10
 
 GPT-over-CLI is a simple, lightweight command-line interface (CLI) for interacting with OpenAI's GPT models, including GPT-3, GPT-4 and others. This tool provides a quick and easy way for developers and researchers to generate responses from OpenAI's API directly from their terminal.
 
