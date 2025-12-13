@@ -13,7 +13,7 @@ chmod +x ai.py
 ./ai.py chat --provider openai  # interactive
 ```
 
-**Was ich noch machen musst:**
+**Was ich noch machen muss:**
 1. Echte API-Calls in den Provider-Klassen
 2. Config File Support (`~/.aichat.json` mit Keys)???
 3. Streaming implementieren 
